@@ -7,3 +7,4 @@ var _ = require('underscore');
 
 const result = _.contains([2,4,6],7);
 console.log(result);
+v//ar a=require('mongoose')
