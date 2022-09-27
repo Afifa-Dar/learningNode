@@ -1,7 +1,7 @@
 getCustomer(1)
-                .then(costumer => getTopMovies())
+                .then(costumer => getTopMovies(costumer))
                 .then(movies => sendEmail())
-                .then(console.log("Enail Sent"))
+                .then(() => console.log("Enail Sent"))
                 .catch(err => console.log("Error" , err.message))  
 
 
@@ -19,7 +19,7 @@ function getCustomer(id) {
     }) 
 }
   
-function getTopMovies() {
+function getTopMovies(costumer) {
     return new Promise ( ( resolve , reject) => {
         setTimeout(() => {
             console.log("Get movies...")
