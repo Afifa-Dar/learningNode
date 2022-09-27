@@ -18,10 +18,11 @@ mongoose.connect( "mongodb://localhost/playground")  //connection string. return
 // data typesof schema
 // String , Number , Boolean , Array , Buffer (to store binary data) , ObjectId (uniquley identifier) , Date
 
+// mongoose validation is use for database vlaidaiton whereas JOi validaiton is on client side
 
  const courseSchema = new mongoose.Schema({
-    courseTitle : String,     // keys : value Type
-    courseCode : String , 
+    courseTitle : {type : String, required : true} ,  // this validation is a part of mongoose
+    courseCode : String ,    // keys : value Type
      author : String,
      tags : [String],
      date : {type : Date , default : Date.now},
@@ -36,16 +37,29 @@ const Course = mongoose.model("Course" , courseSchema)   // 1st arg => model nam
 //save documents in database
 async function createCourse(){
     const course = new Course({    // if we keep it outside sysnc function it cause duplicate documents
-        courseTitle : "Fcuntional Programming",
-        courseCode : "FC-780" ,
-        author : 'Bianca Gondolfe',
-        tags : [ "JS","FP"],
+        courseTitle : "Machine Learning",
+        courseCode : "ML-785" ,
+        author : 'Mufaddal Hatim',
+        tags : [ "ML","dataSci"],
         isPublish : true
     })
-    const result = await course.save() // here we deal with async operation
-    console.log(result)
+
+    try{
+     
+      //  course.validate(// return a promise of void..
+      //     err => {
+      //       if(err) console.log("try again..")
+      //     }
+      // )  
+      
+      const result = await course.save() // here we deal with async operation
+      console.log(result)
+    }
+    catch(err){
+        console.log(err.message)
+    }
 }
-//createCourse()
+createCourse()
 
 // querying the courses
 async function getCourse(){
@@ -154,4 +168,4 @@ async function  deleteCourse(id) {
   // const course = await Course.findByIdAndRemove()  // get deleted course obj 
   // console.log(course)
 }
-deleteCourse('632d62ba7bd87eca1956fc43')
+//deleteCourse('632d62ba7bd87eca1956fc43')
