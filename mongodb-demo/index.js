@@ -1,15 +1,15 @@
 // connect to mongoDB
 
 const mongoose = require('mongoose')
-mongoose.connect( "mongodb://localhost/playground")  //connection string. return promise
-                                                //. In real world application we use environemnt varaiale . Not harcoded
- .then(()=>console.log("Connected to database")) 
- .catch(err => console.error("Couldn't connect to MongoDb" , err.message))
+mongoose.connect("mongodb://localhost/playground")  //connection string. return promise
+  //. In real world application we use environemnt varaiale . Not harcoded
+  .then(() => console.log("Connected to database"))
+  .catch(err => console.error("Couldn't connect to MongoDb", err.message))
 
-            // define schema....
+// define schema....
 
- // we use schema to define the shape of documents in mongoDB collection
- // specifi to mongoose not part of mongoDb
+// we use schema to define the shape of documents in mongoDB collection
+// specifi to mongoose not part of mongoDb
 
 // collection => tables (in relational database)
 // documments => row   (in relational database)
@@ -20,121 +20,187 @@ mongoose.connect( "mongodb://localhost/playground")  //connection string. return
 
 // mongoose validation is use for database vlaidaiton whereas JOi validaiton is on client side
 
- const courseSchema = new mongoose.Schema({
-    courseTitle : {type : String, required : true} ,  // this validation is a part of mongoose
-    courseCode : String ,    // keys : value Type
-     author : String,
-     tags : [String],
-     date : {type : Date , default : Date.now},
-    isPublish : Boolean
- })
+const courseSchema = new mongoose.Schema({
+
+  courseTitle: {
+    type: String,
+    required: true,
+    minlength: 7,
+    trim : true , 
+    maxlength: 20,
+    match: /^[a-z ]+$/i
+  },  // this validation is a part of mongoose
+
+  courseCode: {
+    type: String, 
+    uppercase : true 
+  },   // keys : value Type
+
+  author: String,
+
+  category: {
+    type: String,
+    required: true,
+    lowercase : true , 
+    get : v => v.toUpperCase(),
+    enum: ["development", "networks", 'iot']
+  },
+
+  tags: {  // custom validator
+    type: Array,
+    validate: {
+      // validator :v =>  v && v.length > 0 ,   // synchronous..
+      // Async validator
+      isAsync : true,
+      // validator: async function(v) {
+      //   setTimeout(() => {
+      //     //do some syync operation..
+      //    return v && v.length > 0;
+      //   }, 4000)
+      // },
+      validator : v => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              if(!v) reject(new Error("there must be tag.."))
+              resolve(v && v.length > 0);
+            }, 3000);
+        });
+      },
+      message: "There shold be atleast one tag"
+    }
+  },
+
+  date: { type: Date, default: Date.now },
+
+  isPublish: Boolean,
+
+  price: {
+    type: Number,
+    min: 10,
+    max: 300,
+    required: function () {
+      return this.isPublish   // we cant use arrow fucntion bcz it take 'this' value from fucntion not obj
+    },
+    get : v => Math.round(v) ,  // call when reading the value
+    set : v => Math.round(v)  // call while setting up the value
+    
+  }
+  
+})
 
 // // compile schema into model
-const Course = mongoose.model("Course" , courseSchema)   // 1st arg => model name , 2nd arg => schema
- // Course => class its documents => instace of this class
+const Course = mongoose.model("Course", courseSchema)   // 1st arg => model name , 2nd arg => schema
+// Course => class its documents => instace of this class
 
 
 //save documents in database
-async function createCourse(){
-    const course = new Course({    // if we keep it outside sysnc function it cause duplicate documents
-        courseTitle : "Machine Learning",
-        courseCode : "ML-785" ,
-        author : 'Mufaddal Hatim',
-        tags : [ "ML","dataSci"],
-        isPublish : true
-    })
+async function createCourse() {
+  const course = new Course({    // if we keep it outside sysnc function it cause duplicate documents
+    courseTitle: "System Programming  ",
+    courseCode: "se-785",
+    author: 'saman hina',
+    tags: ["cs"],
+    isPublish: true,
+    price: 11.8,
+    category: "development"
+  })
 
-    try{
-     
-      //  course.validate(// return a promise of void..
-      //     err => {
-      //       if(err) console.log("try again..")
-      //     }
-      // )  
-      
-      const result = await course.save() // here we deal with async operation
-      console.log(result)
-    }
-    catch(err){
-        console.log(err.message)
-    }
+  try {
+
+    //  course.validate(// return a promise of void..
+    //     err => {
+    //       if(err) console.log("try again..")
+    //     }
+    // )  
+
+    const result = await course.save() // here we deal with async operation
+    console.log(result)
+  }
+  catch (err) {   // for displaying errors
+    console.log(err)
+    for( let i in err.errors) console.log(`${i} : ${err.errors[i]}`)
+  }
 }
-createCourse()
+//createCourse()
 
 // querying the courses
-async function getCourse(){
-    //const course = await Course.find()   // find all courses
+async function getCourse() {
+  //const course = await Course.find()   // find all courses
 
-    const firstTwoCourses = await Course.find().limit(2)  // get 1st two course.. we get this using  limit()
-    console.log(firstTwoCourses)
+  const firstTwoCourses = await Course.find().limit(2)  // get 1st two course.. we get this using  limit()
+  //console.log(firstTwoCourses)
 
-    const lastTwoCourses = await Course.find().skip(1)      // get last two course.. we get this using  skip()
-    console.log("Last two Courses",lastTwoCourses)
+  const lastTwoCourses = await Course.find().skip(1)      // get last two course.. we get this using  skip()
+  //console.log("Last two Courses", lastTwoCourses)
 
-            // Pagination....
-    const pageNumber = 3;     // in real world application it gts from queryString
-    const pageSize = 5;
-         // if we wana get documents only of a current page
-         // we achieve this using limit() and skip()
+  // Pagination....
+  const pageNumber = 3;     // in real world application it gts from queryString
+  const pageSize = 5;
+  // if we wana get documents only of a current page
+  // we achieve this using limit() and skip()
 
-    const doc = await Course.find().skip((pageNumber-1)*pageSize).limit(pageSize)
-    console.log("Doc of current page" , doc)
+  const doc = await Course.find().skip((pageNumber - 1) * pageSize).limit(pageSize)
+  //console.log("Doc of current page", doc)
 
-    //const course = await Course.find({author : "Mosh Hamedani",isPublish : true})   // find specific courses.. by apply filters
-    
-    // const course = await Course.find({isPublish : true})  // costumize query
-    //                             .select({courseCode : 1 , courseTitle : 1})  // 1 => select this 
-    //                             .sort({courseTitle : 1})  //1=> ascending 2=> descending
-    
-    // query using comparison opertor....
+  //const course = await Course.find({author : "Mosh Hamedani",isPublish : true})   // find specific courses.. by apply filters
 
-    // eq(eaqual)   ne(not equal)   gt(greater then)    gte(gretaer then equal to)
-    // lt(less then)    lte(less then equal to)     in      nin(not in)
-    
-    //const course = await Course.find({price :10})  //find course having price equal to 10
+  // const course = await Course.find({isPublish : true})  // costumize query
+  //                             .select({courseCode : 1 , courseTitle : 1})  // 1 => select this 
+  //                             .sort({courseTitle : 1})  //1=> ascending 2=> descending
 
-    //const course = await Course.find({price : {$gte :10 , $lte : 20}}) //price btw 10 and 20 . $ represent its operator
+  // query using comparison opertor....
 
-    //const course = await Course.find({price : { $in : [10,15,20]}}) //having price => 10,15 and 20
+  // eq(eaqual)   ne(not equal)   gt(greater then)    gte(gretaer then equal to)
+  // lt(less then)    lte(less then equal to)     in      nin(not in)
 
-        // query using logical opertor....
-    
-    //const course = await Course.find().or([ {author : "Mosh Hamedani"} , {isPublish : true} ])
+  //const course = await Course.find({price :10})  //find course having price equal to 10
 
-    //const course = await Course.find().and([ {author : "Mosh Hamedani"} , {isPublish : true} ])
+  //const course = await Course.find({price : {$gte :10 , $lte : 20}}) //price btw 10 and 20 . $ represent its operator
 
-               // query using regular expression....
-    //const course = await Course.find({author : /^Mosh/i}); //author start with mosh
-   // const course = await Course.find({author : /khan$/i}); //author ends with khan
-    const course = await Course.find({author : /.*ahmed.*/i}); //author contains with ahmed
-    console.log(course )
+  //const course = await Course.find({price : { $in : [10,15,20]}}) //having price => 10,15 and 20
 
-      // count no of documents 
-    const publishCourses = await Course.find({isPublish:true}).count() // get count of publishCourses
-     console.log(publishCourses)
+  // query using logical opertor....
+
+  //const course = await Course.find().or([ {author : "Mosh Hamedani"} , {isPublish : true} ])
+
+  //const course = await Course.find().and([ {author : "Mosh Hamedani"} , {isPublish : true} ])
+
+  // query using regular expression....
+  //const course = await Course.find({author : /^Mosh/i}); //author start with mosh
+  // const course = await Course.find({author : /khan$/i}); //author ends with khan
+  const course = await Course.find({ author: /.*ahmed.*/i }); //author contains with ahmed
+  //console.log(course)
+
+  // count no of documents 
+  const publishCourses = await Course.find({ isPublish: true }).count() // get count of publishCourses
+ // console.log(publishCourses)
+
+  const newCourse = await Course.find({_id : '63351fd464d87839164d2db7'})
+  console.log(newCourse[0].price , newCourse[0].category)
+  console.log(newCourse)
 }
-//getCourse()
+getCourse()
 
-   // update course
-   async function  updateCourse(id) {
-    // Query First Approach...
+// update course
+async function updateCourse(id) {
+  // Query First Approach...
   // useful when we need to take inpit from client..
   // when we want to make sure update valid rule ( mean define rule for updates)..
 
-// const course = await Course.findById(id)    //get course
-// if(!course) return                          // if no course found!
-// // course.author = "New Author"                // else update course
-// // course.price = 2
+  // const course = await Course.findById(id)    //get course
+  // if(!course) return                          // if no course found!
+  // // course.author = "New Author"                // else update course
+  // // course.price = 2
 
-// //another approach
-// course.set({
-//   author : "Ali khan" , 
-//   isPublished : true 
-// })
-// const result = await course.save()           // save update
-// console.log(result)                          // print result (optional!)
+  // //another approach
+  // course.set({
+  //   author : "Ali khan" , 
+  //   isPublished : true 
+  // })
+  // const result = await course.save()           // save update
+  // console.log(result)                          // print result (optional!)
 
-    // Update First Approach...
+  // Update First Approach...
   // when you want to update document or multiple document from directly to the database ..
 
   // const result = await Course.update({_id : id} , {   // 1st arg->filter object , 2nd arg -> update object
@@ -147,22 +213,22 @@ async function getCourse(){
   // console.log(result)   // get update object , NOT updated course . 
 
   // to get updated course obejct .
-  const course = await Course.findByIdAndUpdate(id , {   // 1st arg-> id , 2nd arg -> update object , 3rd Arg -> to get updates
+  const course = await Course.findByIdAndUpdate(id, {   // 1st arg-> id , 2nd arg -> update object , 3rd Arg -> to get updates
     // use updates operators..
-  $set : {
-    author : "Engr Adeeba Fatima" ,
-    isPublish : false
-  }
-} , { new : false} /* false by default.. if false : get course obj from database without update*/ )  
-console.log(course)  
+    $set: {
+      author: "Engr Adeeba Fatima",
+      isPublish: false
+    }
+  }, { new: false } /* false by default.. if false : get course obj from database without update*/)
+  console.log(course)
 }
 //updateCourse('632d62ba7bd87eca1956fc43')
 
 
 
-          // Delete course
-async function  deleteCourse(id) {
-  const result = await Course.deleteOne({_id : id})
+// Delete course
+async function deleteCourse(id) {
+  const result = await Course.deleteOne({ _id: id })
   console.log(result)   // get reult object not deleted course..
 
   // const course = await Course.findByIdAndRemove()  // get deleted course obj 
