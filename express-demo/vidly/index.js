@@ -1,8 +1,12 @@
 // import express for RESTful service
 const express = require('express');
+
 const app = express();
 const genere = require('./routes/generes')
-const port = process.env.PORT || 3000
+
+
+const port = process.env.PORT || 5000
+
 // to read req body
 app.use(express.json())
 app.use('/api/genere',genere)
