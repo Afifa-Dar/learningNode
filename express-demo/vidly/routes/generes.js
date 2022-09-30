@@ -1,18 +1,23 @@
 // import express for RESTful service
 const express = require('express');
+const mongoose = require('mongoose')
 const router = express.Router();
 
 // import Joi to facilitate validation..
 const Joi = require('joi');
 
-// import database API
-const genereDatabase = require('./database')
-const Genere = genereDatabase.Genere
-const create = genereDatabase.create
-const save = genereDatabase.save
-const update = genereDatabase.update
-const del = genereDatabase.delete
 
+const Genere = mongoose.model("Genere" , new mongoose.Schema({
+    id : Number ,
+    title :{
+        type : String , 
+        minlength : 5 , 
+        maxlength : 10 , 
+        match : /^[a-zA-z]+$/i,
+        trim : true , 
+        uppercase : true
+    } 
+}))
 
 
 // get all genere
@@ -42,16 +47,19 @@ router.get('/:id' , async (req , res ) => {
 router.post('/', async (req , res ) => {
 
     // create genere
-    const newGenere = await create(req.body.title)
+    const genere = new Genere({
+        title : req.body.title , 
+        id : (await Genere.find().count())+1
+     })
 
     //validat genere 
-    let {error} = validateTitle(newGenere.title)
+    let {error} = validateTitle(genere.title)
 
     if(error) return res.status(400).send(error.details[0].message)
 
     //save genere
-    save(newGenere)
-    res.send(newGenere)
+    await genere.save()
+    res.send(genere)
 })
 
 // update genere
@@ -70,8 +78,12 @@ router.put('/:id' , async ( req , res ) => {
     if(error) return res.status(400).send(error.details[0].message)
 
     //update genere
-   update(req.params.id , req.body.title);
-
+   await Genere.update({id : req.params.id } , {   // 1st arg->filter object , 2nd arg -> update object
+        // use updates operators..
+    $set : {
+        title : req.body.title
+      }
+    })
    // end res
    res.end()
 })
@@ -86,7 +98,7 @@ router.delete('/:id' , async ( req , res ) => {
    if(genere.length == 0) return res.status(404).send("No such genere found")
 
    //else delete specific genere
-   del(req.params.id)
+   await Genere.deleteOne({ id: req.params.id })
    // end res
    res.end()
 

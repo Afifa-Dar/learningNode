@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
+ const mongoose = require('mongoose')
 
-mongoose.connect("mongodb://localhost/vidly")  //connection string. return promise
-  //. In real world application we use environemnt varaiale . Not harcoded
-  .then(() => console.log("Connected to database"))
-  .catch(err => console.error("Couldn't connect to MongoDb", err.message))
+// mongoose.connect("mongodb://localhost/vidly")  //connection string. return promise
+//   //. In real world application we use environemnt varaiale . Not harcoded
+//   .then(() => console.log("Connected to database"))
+//   .catch(err => console.error("Couldn't connect to MongoDb", err.message))
 
 
 const schema = new mongoose.Schema({
