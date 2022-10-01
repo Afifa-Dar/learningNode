@@ -1,24 +1,8 @@
 // import express for RESTful service
 const express = require('express');
-const mongoose = require('mongoose')
 const router = express.Router();
 
-// import Joi to facilitate validation..
-const Joi = require('joi');
-
-
-const Genere = mongoose.model("Genere" , new mongoose.Schema({
-    id : Number ,
-    title :{
-        type : String , 
-        minlength : 5 , 
-        maxlength : 10 , 
-        match : /^[a-zA-z]+$/i,
-        trim : true , 
-        uppercase : true
-    } 
-}))
-
+const {Genere , validate} = require('../models/genere')
 
 // get all genere
 router.get('/' , async (req , res ) => {
@@ -53,7 +37,7 @@ router.post('/', async (req , res ) => {
      })
 
     //validat genere 
-    let {error} = validateTitle(genere.title)
+    let {error} = validate(genere.title)
 
     if(error) return res.status(400).send(error.details[0].message)
 
@@ -73,7 +57,7 @@ router.put('/:id' , async ( req , res ) => {
     if(genere.length == 0) return res.status(404).send("No such genere found")
  
    //else , validate updated value
-    let {error} = validateTitle(req.body.title);
+    let {error} = validate(req.body.title);
 
     if(error) return res.status(400).send(error.details[0].message)
 
@@ -103,14 +87,5 @@ router.delete('/:id' , async ( req , res ) => {
    res.end()
 
 })
-
-
-const validateTitle = genere => {
-    const schema = 
-        Joi.string().pattern(new RegExp('^[a-zA-Z]{5,10}$')).required()   //only those req params are allowed that are declare in schema
-
-    return schema.validate(genere)
-}
-
 
 module.exports = router

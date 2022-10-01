@@ -1,21 +1,9 @@
 // import express for RESTful service
 const express = require('express');
-const mongoose = require('mongoose')
 const router = express.Router();
 
-// import Joi to facilitate validation..
-const Joi = require('joi');
 
-
-const Costumer = mongoose.model("Costumer" , new mongoose.Schema({
-    name :{
-        type : String , 
-        minlength : 10 , 
-        maxlength : 50 , 
-        match : /^[a-zA-z ]+$/i,
-        trim : true , 
-    } 
-}))
+const {Costumer , validate} = require('../models/costumers')
 
 // get all costumer...
 router.get('/' , async (req , res ) => {
@@ -38,12 +26,15 @@ router.get('/:id' , async ( req , res ) => {
  // add new costumer...
  router.post('/' , async (req , res ) => {
 
-    const newCostumer = new Costumer({
-        name : req.body.name
-    })
-    let {error} = validateName(newCostumer.name)
+    let {error} = validate(req.body)
 
     if(error) return res.status(400).send(error.details[0].message)
+
+    const newCostumer = new Costumer({
+        name : req.body.name ,
+        isGold : req.body.isGold ,
+        phone : req.body.phone
+    })
 
     const result = await newCostumer.save()
     res.send(result)
@@ -55,13 +46,15 @@ router.get('/:id' , async ( req , res ) => {
     const updateCostumer = await  Costumer.findById(req.params.id)
     if (!updateCostumer) return res.status(404).send("No such Costumer Found..")
 
-    let {error} = validateName(req.body.name)
+    let {error} = validate(req.body)
     if(error) return res.status(400).send(error.details[0].message)
 
     await Costumer.update({_id : req.params.id} , {
 
         $set : {
-            name : req.body.name
+            name : req.body.name ,
+            isGold : req.body.isGold ,
+            phone : req.body.phone
         }
     })
     res.end()
@@ -79,11 +72,6 @@ router.delete('/:id' , async (req , res ) => {
    
 })
 
- const validateName = name => {
-    const schema = 
-        Joi.string().pattern(new RegExp('^[a-zA-Z ]+$')).required().min(10).max(50)   //only those req params are allowed that are declare in schema
-
-    return schema.validate(name)
-}
+ 
 
  module.exports = router
