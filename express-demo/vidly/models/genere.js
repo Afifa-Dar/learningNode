@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const Joi = require('joi');
 
 
-const Genere = mongoose.model("Genere" , new mongoose.Schema({
+const genereSchema = new mongoose.Schema({
     id : Number ,
     title :{
         type : String , 
@@ -14,7 +14,9 @@ const Genere = mongoose.model("Genere" , new mongoose.Schema({
         trim : true , 
         uppercase : true
     } 
-}))
+})
+
+const Genere = mongoose.model("Genere" , genereSchema)
 
 const validateTitle = genere => {
     const schema = 
@@ -25,3 +27,4 @@ const validateTitle = genere => {
 
 exports.Genere = Genere;
 exports.validate = validateTitle;
+exports.genereSchema = genereSchema

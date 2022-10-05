@@ -1,0 +1,43 @@
+There are three approaches
+
+1- Refrences ( Normalization ) 
+        -> having consistency ( modification in author obj do modify its occurance in course object )
+        -> separate query for both object
+        -> query not fast
+
+    author{
+        id: 
+        name :
+    }
+    course{
+        author : author_id (refrence to author object..)
+    }
+
+
+2- Embedded Document ( Denormalization..)
+        -> having inconsistency
+        -> fastest query (gives us Performance..)
+        -> single query for both object
+    
+    course{
+        author{
+
+        }
+    }
+
+3 - Hybrid 
+        -> having a snapshot of data at a point of time..
+        -> like use in Ecommerce website..
+
+    author{
+        id:
+        name:
+        // other prop
+    }
+
+    course{
+        author{
+            id : refs to author obj
+            name : 
+        }
+    }
