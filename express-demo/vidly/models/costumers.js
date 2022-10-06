@@ -11,7 +11,10 @@ const Costumer = mongoose.model("Costumer" , new mongoose.Schema({
         trim : true ,
         required : true
     } ,
-    isGold : Boolean , 
+    isGold : {
+        type :Boolean , 
+        default : false
+    } ,
     phone : {
         type : String ,
         match : /^021-[0-9]{9}$/,

@@ -18,7 +18,7 @@ const Movies = mongoose.model("movies" , new mongoose.Schema({
     } , 
     noOfStock : {
         type : Number ,
-        min : 1 , 
+        min : 0 , 
         max : 20 
     } , 
     dailyRentalRate :{
@@ -31,7 +31,7 @@ const Movies = mongoose.model("movies" , new mongoose.Schema({
 const validateMovies = movie => {  // joi schema whats client sends us
     const schema = Joi.object({
         title : Joi.string().required().min(5).max(50).pattern(new RegExp('^[a-zA-Z ]+$')) ,
-        genereId : Joi.string().required(),
+        genereId : Joi.objectId().required(),
         noOfStock : Joi.number().min(1).max(20) ,
         dailyRentalRate : Joi.number().min(0).max(5)
     })
