@@ -1,0 +1,4 @@
+{
+    "secretKey" : "" , 
+    "db" : "mongodb://localhost/vidly"
+}

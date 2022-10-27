@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const router = express.Router();
 const Fawn = require('fawn');
 
+const auth = require('../middleware/auth')
+
 Fawn.init("mongodb://localhost/vidly")
 
 const { Costumer }  = require('../models/costumers')
@@ -27,7 +29,7 @@ router.get( '/:id', async (req , res ) => {
     res.send(rental)
 })
 
-router.post( '/' , async (req , res ) => {
+router.post( '/' , auth , async (req , res ) => {
 
     const {error} = validate(req.body) ;
 
@@ -67,7 +69,7 @@ try{
     new Fawn.Task()
         // write operations... All of them are treated as a unit
         .save('rentals' , newRental)   // collectionName , object 
-        .update('movies' , {_id : movie._id} ,{  // update object
+        .updateOne('movies' , {_id : movie._id} ,{  // update object
             $inc : {noOfStock : -1}   // -1 for decrement
         })
         .run()   // after all operations to run these operations
@@ -81,7 +83,7 @@ catch(err){
 
 
 
-router.put( '/:id' , async (req , res ) => {
+router.put( '/:id' , auth , async (req , res ) => {
 
     const {error} = validate(req.body) ;
     if (error) return res.status(400).send( error.details[0].message) ;
@@ -119,7 +121,7 @@ try {
     }
 })
 
-router.delete( '/:id' , async (req , res ) => {
+router.delete( '/:id' , auth ,async (req , res ) => {
     try{
         const deleteObj = await Rental.findByIdAndDelete(req.params.id)
 

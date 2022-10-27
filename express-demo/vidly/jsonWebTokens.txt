@@ -1,0 +1,17 @@
+they are long string that identifies user
+like driving liences or password..
+
+when user login to srver it generate json web tokens and retruns to client 
+and tell client that next time you login our system you have to sho this token..
+
+at client we need to store it so we can send  to server on future API calls
+store it in local storage of browser in web application
+
+3 parts of jsonWebTokens 
+1 - headers
+2 -  include clients public properties like name id etc..
+so we dont need to send extra query to database to get these properties
+
+3 - digital signatures that store json object along with private key that is store in server..
+so if a client modifies web token digital signature chnge and become invalid..
+to make new digital signature we need private key that onl store in server

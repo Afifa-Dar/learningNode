@@ -1,0 +1,5 @@
+jest has development dependency
+(spec|test).[tj]s?(x)   pattern of test files..
+anything strt with spec/test having ext .tj/s are trated as test files
+
+describe() use to grouping a bunch of test

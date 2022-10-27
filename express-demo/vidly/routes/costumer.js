@@ -2,6 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
+const auth = require('../middleware/auth')
+
 
 const {Costumer , validate} = require('../models/costumers')
 
@@ -24,7 +26,7 @@ router.get('/:id' , async ( req , res ) => {
 })
 
  // add new costumer...
- router.post('/' , async (req , res ) => {
+ router.post('/' ,auth , async (req , res ) => {
 
     let {error} = validate(req.body)
 
@@ -42,14 +44,14 @@ router.get('/:id' , async ( req , res ) => {
 
  // update Costumer
 
- router.put('/:id' , async (req , res ) => {
+ router.put('/:id' ,auth , async (req , res ) => {
     const updateCostumer = await  Costumer.findById(req.params.id)
     if (!updateCostumer) return res.status(404).send("No such Costumer Found..")
 
     let {error} = validate(req.body)
     if(error) return res.status(400).send(error.details[0].message)
 
-    await Costumer.update({_id : req.params.id} , {
+    await Costumer.updateOne({_id : req.params.id} , {
 
         $set : {
             name : req.body.name ,
@@ -61,7 +63,7 @@ router.get('/:id' , async ( req , res ) => {
  })
 
  // delete costumer...
-router.delete('/:id' , async (req , res ) => {
+router.delete('/:id' , auth ,async (req , res ) => {
     const deleteCostumer = await  Costumer.findById(req.params.id)
     if (!deleteCostumer) return res.status(404).send("No such Costumer Found..")
 

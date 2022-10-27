@@ -5,7 +5,6 @@ const Joi = require('joi');
 
 
 const genereSchema = new mongoose.Schema({
-    id : Number ,
     title :{
         type : String , 
         minlength : 5 , 

@@ -1,0 +1,325 @@
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'toString') Cannot read properties of undefined (reading 'toString')","stack":"TypeError: Cannot read properties of undefined (reading 'toString')\n    at toString (D:\\nodejs\\express-demo\\vidly\\routes\\generes.js:16:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"kind":"Number","level":"error","message":"Cast to Number failed for value \":id\" (type string) at path \"id\" for model \"Genere\" Cast to Number failed for value \":id\" (type string) at path \"id\" for model \"Genere\"","path":"id","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stack":"CastError: Cast to Number failed for value \":id\" (type string) at path \"id\" for model \"Genere\"\n    at model.Query.exec (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4891:21)\n    at model.Query.Object.<anonymous>.Query.then (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4990:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\":id\"","value":":id","valueType":"string"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"kind":"ObjectId","level":"error","message":"Cast to ObjectId failed for value \":id\" (type string) at path \"_id\" for model \"Genere\" Cast to ObjectId failed for value \":id\" (type string) at path \"_id\" for model \"Genere\"","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \":id\" (type string) at path \"_id\" for model \"Genere\"\n    at model.Query.exec (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4891:21)\n    at model.Query.Object.<anonymous>.Query.then (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4990:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\":id\"","value":":id","valueType":"string"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"kind":"ObjectId","level":"error","message":"Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\" Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\"","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\"\n    at model.Query.exec (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4891:21)\n    at model.Query.Object.<anonymous>.Query.then (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4990:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"6\"","value":"6","valueType":"string"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"kind":"ObjectId","level":"error","message":"Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\" Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\"","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\"\n    at model.Query.exec (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4891:21)\n    at model.Query.Object.<anonymous>.Query.then (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4990:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"6\"","value":"6","valueType":"string"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"kind":"ObjectId","level":"error","message":"Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\" Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\"","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \"6\" (type string) at path \"_id\" for model \"Genere\"\n    at model.Query.exec (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4891:21)\n    at model.Query.Object.<anonymous>.Query.then (D:\\nodejs\\express-demo\\vidly\\node_modules\\mongoose\\lib\\query.js:4990:15)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","stringValue":"\"6\"","value":"6","valueType":"string"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"listen to port 5000..."}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}
+{"level":"info","message":"Connected to mongodb://localhost/vidly_test"}

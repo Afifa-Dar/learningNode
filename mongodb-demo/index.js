@@ -176,7 +176,7 @@ async function getCourse() {
  // console.log(publishCourses)
 
   const newCourse = await Course.find({_id : '63351fd464d87839164d2db7'})
-  console.log(newCourse[0].price , newCourse[0].category)
+  //console.log(newCourse[0].price , newCourse[0].category)
   console.log(newCourse)
 }
 getCourse()

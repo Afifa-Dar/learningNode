@@ -47,7 +47,7 @@ async function addGenere (){
 }     
 
 const updateGenere = async (id , updateTitle) => {
-    await Genere.update({id : id} , {   // 1st arg->filter object , 2nd arg -> update object
+    await Genere.updateOne({id : id} , {   // 1st arg->filter object , 2nd arg -> update object
             // use updates operators..
         $set : {
             title : updateTitle
